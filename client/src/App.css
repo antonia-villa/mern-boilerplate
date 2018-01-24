@@ -57,6 +57,21 @@ nav a:hover {
   box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
 }
 
+.error{
+  background-color: pink;
+  color: red;
+  border: 1px solid red;
+  border-radius: 5px;
+  padding: 10px 30px;
+  width: 75%;
+}
+
+.no-flash{
+  visibility: hidden;
+  padding: 10px 30px;
+  width: 75%;
+}
+
 /************************/
 /* Default Styles Below */
 /************************/

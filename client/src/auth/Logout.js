@@ -5,11 +5,13 @@ class Logout extends Component {
 	handleLogout = (e) => {
 		e.preventDefault();
 		//TODO: Delete toke from the local storage
+		localStorage.removeItem('merkToken');
 		//TODO: back to home page
-		console.log('Logout function was called!');
+		this.props.updateUser();
 	}
 	render() {
-		return (<Link to="/" onClick={this.handleLogout}>Logout</Link>);
+		return (<Link to="/" onClick={this.handleLogout}>Logout</Link>
+			);
 	}
 }
 

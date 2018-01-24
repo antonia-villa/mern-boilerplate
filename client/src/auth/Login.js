@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import axios from 'axios';
 
 class Login extends Component {
 	constructor(props) {
@@ -17,6 +18,14 @@ class Login extends Component {
 		e.preventDefault();
 		console.log('form was submitted!');
 		//TODO: Use axios to call serer and attempt to login
+		axios.post('/auth/login', {
+			email: this.state.email,
+			password:this.state.password
+		}).then(result => {
+			console.log('Success', result);
+		}).catch(error => {
+			console.log('error from server', error);
+		})
 		//NOTE: Expect to receive a token back from server on success
 		//NOTE: Make sure to handle error messages on failure
 		//TODO: Redirect to profile?
